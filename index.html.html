@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio on Click</title>
+</head>
+<body>
+
+    <h1>Click the words below to play audio</h1>
+
+    <!-- Texts/words with click event to play audio -->
+    <p>
+        Click on <span class="clickable" onclick="playAudio('audio1')">this word</span> 
+        to play the first sound.
+    </p>
+    <p>
+        Click on <span class="clickable" onclick="playAudio('audio2')">another word</span> 
+        to play the second sound.
+    </p>
+
+    <!-- Audio files -->
+    <audio id="audio1" src="audio1.mp3"></audio>
+    <audio id="audio2" src="audio2.mp3"></audio>
+
+    <!-- JavaScript function to handle audio -->
+    <script>
+        function playAudio(audioId) {
+            var audio = document.getElementById(audioId);
+            audio.play();
+        }
+    </script>
+<style>
+    .clickable {
+        color: blue;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+</style>
+
+</body>
+</html>
